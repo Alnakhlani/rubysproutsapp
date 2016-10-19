@@ -3,14 +3,18 @@
   <head>
     <title>LazyCook</title>
     <%= csrf_meta_tags %>
-
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
-    <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+<link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.0.3/css/bootstrap.css">
+<link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.0.3/css/bootstrap-theme.css">
+<%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+<%= csrf_meta_tags %>
   </head>
 
   <body>
-    <%= render 'layouts/menu' %>
-
+  <%=render 'layouts/header' %>
+    <div class="container">
+    <%=yield  :page_title %>
     <%= yield %>
+  </div>
   </body>
 </html>
