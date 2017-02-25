@@ -1,0 +1,10 @@
+body {
+  background-color: pink;
+}
+img {
+  float:left;
+  width: 800px;
+}
+p {
+vertical-align: baseline;
+}
