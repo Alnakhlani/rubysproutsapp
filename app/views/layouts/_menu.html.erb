@@ -1,4 +1,9 @@
-<ul>
-  <li><%=link_to 'Contact page', naber_url %></li>
-  <li><%=link_to 'Home page', root_url %></li>
+<ul class="nav navbar-nav">
+  <!-- hangi tab deysen o button aktif gözüküo, ödev olarak diger linkleri yap path ları degistir, terminale rake routes yazınca liste cıkıo -->
+<%= content_tag :li, class:current_page?(root_path) ? 'active' : '' do %>
+    <%=link_to 'Home', naber_url %>
+    <%end %>
+  <li><%=link_to 'FAQ', root_url, target: '_blank' %></li>
+  <li><%=link_to 'Contact', root_url %></li>
+  <li><%=link_to 'Cake', naber_url %></li>
 <ul>

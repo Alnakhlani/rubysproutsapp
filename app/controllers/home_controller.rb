@@ -6,4 +6,6 @@ def index
   end
   def about
   end
+  def cake
+  end
 end
